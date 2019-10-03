@@ -92,7 +92,18 @@ namespace MyBot
             element.Click();
             Thread.Sleep(1000);
         }
-
+        protected void OpenPicture(IWebElement element) {
+            try
+            {
+                element.Click();
+                Thread.Sleep(rnd.Next(1000, 2500));
+            }
+            catch
+            {
+                RefreshPage();
+                Thread.Sleep(6000);
+            }
+        }
   
         protected void BackPage()
         {
@@ -114,5 +125,12 @@ namespace MyBot
             return false;
         }
 
+        protected List<IWebElement> GetPictures() {
+            return browser.FindElements(By.CssSelector(".v1Nh3.kIKUG._bz0w")).ToList();
+        }
+
+        protected void clickOnElement(string cssSelector) {
+             browser.FindElement(By.CssSelector(cssSelector)).Click();
+        }
     }
 }

@@ -26,43 +26,27 @@ namespace MyBot
             RefreshPage();
             Thread.Sleep(6000);
 
-            while (index < countLikesOnTag + 9)
-            {
-                OpenPictureAndSetLike(index);
-                index++;
-            }
-        }
+            List<IWebElement> elements = GetPictures();
 
-        // примерно 10ая картинка 
-        private void OpenPictureAndSetLike(int index)
-        {
-            List<IWebElement> elements = browser.FindElements(By.CssSelector(".v1Nh3.kIKUG._bz0w")).ToList();
             if (elements.Count != 0)
             {
-                try
+                while (index < countLikesOnTag + 9)
                 {
-                    elements[index].Click();
-                    Thread.Sleep(rnd.Next(1000, 2500));
-
+                    OpenPicture(elements[index]);
+                    Thread.Sleep(1000);
                     SetLike();
-                    Thread.Sleep(rnd.Next(1000, 2500));
-
-                    browser.Navigate().Back();
-                    //спим примерно 6 минут после фотки
+                    Thread.Sleep(1000);
+                    BackPage();
                     Thread.Sleep(rnd.Next(60 * 1000 * 6, 65 * 1000 * 6));
+                    index++;
                 }
-                catch
-                {
-                    RefreshPage();
-                    Thread.Sleep(6000);
-                }
-
             }
         }
 
+  
         private void SetLike()
         {          
-            browser.FindElement(By.CssSelector(".dCJp8.afkep")).Click();         
+            clickOnElement(".dCJp8.afkep");
         }
 
     }

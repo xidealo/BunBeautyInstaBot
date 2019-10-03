@@ -22,9 +22,25 @@ namespace MyBot
 
         private void button8_Click(object sender, EventArgs e)
         {
+            /*Thread browserThread = new Thread(LikeBotStart);
+            browserThread.SetApartmentState(ApartmentState.STA);
+            browserThread.Start();*/
             InstaBot bot = new InstaLikeBot();
-
-            bot.start(EmailTB.Text, PassTB.Text, TB_tags.Text, int.Parse(TB_count_likes.Text));      
+            bot.start(EmailTB.Text, PassTB.Text, TB_tags.Text, int.Parse(TB_count_likes.Text));
+        }
+        private void LikeBotStart() {
+       
+        }
+        private void lookHistoryBtn_Click(object sender, EventArgs e)
+        {
+            Thread browserThread = new Thread(HistoryBotStart);
+            browserThread.SetApartmentState(ApartmentState.STA);
+            browserThread.Start();
+        }
+        private void HistoryBotStart()
+        {
+            InstaBot bot = new InstaHistoryBot();
+            bot.start(EmailTB.Text, PassTB.Text, TB_tags.Text, int.Parse(TB_count_likes.Text));
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -101,13 +117,10 @@ namespace MyBot
         }
 
         private void EmailTB_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        {}
 
         private void TB_tags_TextChanged(object sender, EventArgs e)
-        {
+        {}
 
-        }
     }
 }

@@ -39,7 +39,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.lookHistoryBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // PassTB
@@ -119,9 +119,9 @@
             this.label3.Image = ((System.Drawing.Image)(resources.GetObject("label3.Image")));
             this.label3.Location = new System.Drawing.Point(305, 96);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(27, 13);
+            this.label3.Size = new System.Drawing.Size(39, 13);
             this.label3.TabIndex = 15;
-            this.label3.Text = "tags";
+            this.label3.Text = "search";
             // 
             // label4
             // 
@@ -141,22 +141,23 @@
             this.label5.ForeColor = System.Drawing.SystemColors.Window;
             this.label5.Location = new System.Drawing.Point(9, 116);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(261, 13);
+            this.label5.Size = new System.Drawing.Size(125, 13);
             this.label5.TabIndex = 17;
-            this.label5.Text = "Пример: #girl #girls #cute #Moscow #Russia #Black";
+            this.label5.Text = "Пример: #girl, nickname";
             // 
-            // button1
+            // lookHistoryBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.FloralWhite;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(305, 64);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(287, 23);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Запустить истории бот инстаграма";
-            this.button1.UseVisualStyleBackColor = false;
+            this.lookHistoryBtn.BackColor = System.Drawing.Color.FloralWhite;
+            this.lookHistoryBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.lookHistoryBtn.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lookHistoryBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lookHistoryBtn.Location = new System.Drawing.Point(305, 64);
+            this.lookHistoryBtn.Name = "lookHistoryBtn";
+            this.lookHistoryBtn.Size = new System.Drawing.Size(287, 23);
+            this.lookHistoryBtn.TabIndex = 18;
+            this.lookHistoryBtn.Text = "Запустить истории бот инстаграма";
+            this.lookHistoryBtn.UseVisualStyleBackColor = false;
+            this.lookHistoryBtn.Click += new System.EventHandler(this.lookHistoryBtn_Click);
             // 
             // Form1
             // 
@@ -164,7 +165,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(183)))));
             this.ClientSize = new System.Drawing.Size(745, 566);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.lookHistoryBtn);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -193,7 +194,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button lookHistoryBtn;
     }
 }
 
