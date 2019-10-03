@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.PassTB = new System.Windows.Forms.TextBox();
             this.EmailTB = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -38,13 +39,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.RepetNmbr = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // PassTB
             // 
-            this.PassTB.Location = new System.Drawing.Point(150, 113);
+            this.PassTB.Location = new System.Drawing.Point(12, 38);
             this.PassTB.Name = "PassTB";
             this.PassTB.Size = new System.Drawing.Size(180, 20);
             this.PassTB.TabIndex = 8;
@@ -52,7 +52,7 @@
             // 
             // EmailTB
             // 
-            this.EmailTB.Location = new System.Drawing.Point(150, 87);
+            this.EmailTB.Location = new System.Drawing.Point(12, 12);
             this.EmailTB.Name = "EmailTB";
             this.EmailTB.Size = new System.Drawing.Size(180, 20);
             this.EmailTB.TabIndex = 9;
@@ -62,7 +62,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(336, 87);
+            this.label1.ForeColor = System.Drawing.SystemColors.Window;
+            this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
+            this.label1.Location = new System.Drawing.Point(198, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 10;
@@ -71,7 +73,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(336, 113);
+            this.label2.ForeColor = System.Drawing.SystemColors.Window;
+            this.label2.Image = ((System.Drawing.Image)(resources.GetObject("label2.Image")));
+            this.label2.Location = new System.Drawing.Point(198, 38);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(29, 13);
             this.label2.TabIndex = 11;
@@ -81,17 +85,19 @@
             // 
             this.button8.BackColor = System.Drawing.Color.FloralWhite;
             this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button8.Location = new System.Drawing.Point(150, 139);
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button8.Location = new System.Drawing.Point(12, 64);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(137, 23);
+            this.button8.Size = new System.Drawing.Size(287, 23);
             this.button8.TabIndex = 12;
-            this.button8.Text = "Бот инстаграмма";
+            this.button8.Text = "Запустить лайк бот инстаграма";
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // TB_tags
             // 
-            this.TB_tags.Location = new System.Drawing.Point(150, 168);
+            this.TB_tags.Location = new System.Drawing.Point(12, 93);
             this.TB_tags.Name = "TB_tags";
             this.TB_tags.Size = new System.Drawing.Size(287, 20);
             this.TB_tags.TabIndex = 13;
@@ -100,7 +106,7 @@
             // 
             // TB_count_likes
             // 
-            this.TB_count_likes.Location = new System.Drawing.Point(150, 207);
+            this.TB_count_likes.Location = new System.Drawing.Point(12, 132);
             this.TB_count_likes.Name = "TB_count_likes";
             this.TB_count_likes.Size = new System.Drawing.Size(67, 20);
             this.TB_count_likes.TabIndex = 14;
@@ -109,7 +115,9 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(443, 171);
+            this.label3.ForeColor = System.Drawing.SystemColors.Window;
+            this.label3.Image = ((System.Drawing.Image)(resources.GetObject("label3.Image")));
+            this.label3.Location = new System.Drawing.Point(305, 96);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(27, 13);
             this.label3.TabIndex = 15;
@@ -118,7 +126,9 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(223, 210);
+            this.label4.ForeColor = System.Drawing.SystemColors.Window;
+            this.label4.Image = ((System.Drawing.Image)(resources.GetObject("label4.Image")));
+            this.label4.Location = new System.Drawing.Point(85, 135);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(66, 13);
             this.label4.TabIndex = 16;
@@ -127,37 +137,34 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(147, 191);
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(183)))));
+            this.label5.ForeColor = System.Drawing.SystemColors.Window;
+            this.label5.Location = new System.Drawing.Point(9, 116);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(261, 13);
             this.label5.TabIndex = 17;
             this.label5.Text = "Пример: #girl #girls #cute #Moscow #Russia #Black";
             // 
-            // RepetNmbr
+            // button1
             // 
-            this.RepetNmbr.Location = new System.Drawing.Point(150, 233);
-            this.RepetNmbr.Name = "RepetNmbr";
-            this.RepetNmbr.Size = new System.Drawing.Size(67, 20);
-            this.RepetNmbr.TabIndex = 18;
-            this.RepetNmbr.Text = "1";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(223, 236);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 13);
-            this.label6.TabIndex = 19;
-            this.label6.Text = "repet number";
+            this.button1.BackColor = System.Drawing.Color.FloralWhite;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(305, 64);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(287, 23);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Запустить истории бот инстаграма";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.ClientSize = new System.Drawing.Size(482, 303);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.RepetNmbr);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(146)))), ((int)(((byte)(183)))));
+            this.ClientSize = new System.Drawing.Size(745, 566);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -186,8 +193,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox RepetNmbr;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button1;
     }
 }
 

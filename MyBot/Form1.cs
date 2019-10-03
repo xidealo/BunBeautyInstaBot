@@ -20,9 +20,15 @@ namespace MyBot
             InitializeComponent();
         }
 
+        private void button8_Click(object sender, EventArgs e)
+        {
+            InstaBot bot = new InstaLikeBot();
+
+            bot.start(EmailTB.Text, PassTB.Text, TB_tags.Text, int.Parse(TB_count_likes.Text));      
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-           
             // определяю ссылку, где откроется
             browser.Navigate().GoToUrl("https://www.yandex.ru/");
 
@@ -52,8 +58,6 @@ namespace MyBot
 
         private void button3_Click(object sender, EventArgs e)
         {
-            IWebElement element;
-
             //поиск элемента по ID
             //element = browser.FindElement(By.Id("text"));
             // element.SendKeys("test");
@@ -68,15 +72,12 @@ namespace MyBot
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
+        {}
 
         private void button5_Click(object sender, EventArgs e)
         {
             // считаю все новости при помощи css селетора, также можно нажимать сраз несколько кнопок и тд
             List<IWebElement> elements = browser.FindElements(By.CssSelector("#tabnews_newsc a")).ToList();
-
          
         }
 
@@ -97,18 +98,6 @@ namespace MyBot
         private void PassTB_TextChanged(object sender, EventArgs e)
         {
             PassTB.PasswordChar = '*';
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            int countRepet = int.Parse(RepetNmbr.Text);
-            InstBot bot = new InstBot();
-            while (countRepet != 0) {
-
-                bot.InstBotGo(EmailTB.Text, PassTB.Text, TB_tags.Text, int.Parse(TB_count_likes.Text));
-                countRepet--;
-                Thread.Sleep(10000);
-            }
         }
 
         private void EmailTB_TextChanged(object sender, EventArgs e)
