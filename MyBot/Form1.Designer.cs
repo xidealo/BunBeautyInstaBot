@@ -110,7 +110,7 @@
             this.TB_count_likes.Name = "TB_count_likes";
             this.TB_count_likes.Size = new System.Drawing.Size(67, 20);
             this.TB_count_likes.TabIndex = 14;
-            this.TB_count_likes.Text = "5";
+            this.TB_count_likes.Text = "1000";
             // 
             // label3
             // 

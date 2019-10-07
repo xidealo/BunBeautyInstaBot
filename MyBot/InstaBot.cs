@@ -21,12 +21,10 @@ namespace MyBot
 
                 Registration(login, pass);
 
-                Thread.Sleep(2000);
-
                 NotificationCheck();
 
                 // отправляем количество поисковых тегов
-                searchTag(tag);
+                SearchTag(tag);
                 Thread.Sleep(3000);
 
                 startBot(iterations, browser);
@@ -49,11 +47,11 @@ namespace MyBot
         {
             //ищем и заполняем поля
             IWebElement element;
-            Thread.Sleep(1000);
+            Thread.Sleep(500);
 
             element = browser.FindElement(By.Name("username"));
             element.SendKeys(email);
-            Thread.Sleep(1000);
+            Thread.Sleep(500);
 
             element = browser.FindElement(By.Name("password"));
             element.SendKeys(password);
@@ -61,17 +59,20 @@ namespace MyBot
 
             element = browser.FindElement(By.CssSelector(".sqdOP.L3NKy"));
             element.Click();
+
+            Thread.Sleep(3000);
         }
 
-        private void searchTag(string tag)
+        protected string SearchTag(string tag)
         {
             IWebElement element;
+            Thread.Sleep(500);
 
             element = browser.FindElement(By.CssSelector(".XTCLo.x3qfX")); //.XTCLo.x3qfX// ошибка с недостуцпной страницей
+            Thread.Sleep(500);
 
             element.SendKeys(tag);
-            Thread.Sleep(1000);
-
+            Thread.Sleep(2000);
             try
             {
                 element = browser.FindElement(By.ClassName("uyeeR"));
@@ -80,8 +81,11 @@ namespace MyBot
             catch (Exception e) {
                 element.Clear();
                 RefreshPage();
-                searchTag(tag);
+                SearchTag(tag);
             }
+            Thread.Sleep(3000);
+
+            return browser.Url;
         }
 
         private void NotificationCheck()
